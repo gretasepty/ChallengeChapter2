@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home" />
+    <item android:title="Feed"
+        android:id="@+id/feed"
+        android:icon="@drawable/ic_feed"/>
+    <item android:title="Official Store"
+        android:id="@+id/store"
+        android:icon="@drawable/ic_store"/>
+    <item android:title="Whislist"
+        android:id="@+id/whislist"
+        android:icon="@drawable/ic_whislist"/>
+    <item android:title="Transaksi"
+        android:id="@+id/transaksi"
+        android:icon="@drawable/ic_transaksi"/>
+
+</menu>

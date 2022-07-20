@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Navigasi-->
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/kuning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Membuat pencarian-->
+            <EditText
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_search"
+                android:drawableEnd="@drawable/ic_kamera"
+                android:layout_gravity="left|center"
+                android:background="@drawable/cari"
+                android:textColorHint="@color/orange"
+                android:hint="Celana Olahraga Pria Pendek"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"/>
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+
+            <!--Menambahkan cart-->
+            <ImageView
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cart"
+                android:layout_width="26dp"
+                android:layout_height="26dp"/>
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+
+            <!--Menambahkan pesan-->
+            <ImageView
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pesan"
+                android:layout_width="26dp"
+                android:layout_height="26dp"/>
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Header-->
+            <LinearLayout
+                android:background="@color/kuning"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <!--Menambahkan Tulisan-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/biru_tua"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:text="AJAK TEMAN LANGSUNG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="24dp"
+                        android:text="DAPAT 40RB! "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="2dp"
+                        android:background="@drawable/nama_header"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Bonus besar untukmu dan temanmu"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Tampilan saldo dan koin-->
+            <LinearLayout
+                android:elevation="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/saldo"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--Icon Scan-->
+                    <ImageView
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_scan"
+                        android:layout_gravity="center"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent">
+                    </RelativeLayout>
+                    <!--Saldo-->
+                    <LinearLayout
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:drawableStart="@drawable/ic_wallet"
+                            android:textColor="@color/black"
+                            android:text="Rp 16.000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="10dp"
+                            android:text="Isi Saldo ShopeePay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent">
+                    </RelativeLayout>
+                    <!--Koin-->
+                    <LinearLayout
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:drawableStart="@drawable/ic_koin"
+                            android:textColor="@color/black"
+                            android:text="5 Koin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="10dp"
+                            android:text="Klaim koin di sini"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Menu 1-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Card Menu 1-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Lihat Semua"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 2-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/store"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Official Store"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 3-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/basket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Kebutuhan Harian"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 4-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/top_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Top Up"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 5-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/makanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Makanan"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--Menu 2-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Card Menu 1-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/fashion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Fashion"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 2-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/diskon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Diskon"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 3-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/keuangan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Keuangan"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 4-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/game"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Game"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Card Menu 5-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Gambar-->
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/card_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/cuci_gudang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--Keterangan-->
+                    <TextView
+                        android:textAlignment="center"
+                        android:text="Cuci Gudang"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Panel Gratis Ongkir-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/panel_gratisongkir"
+                        android:layout_width="240dp"
+                        android:layout_height="100dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/panel_gratisongkir"
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Pembatas Abu-abu-->
+            <LinearLayout
+                android:background="#EEEEEE"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="12dp">
+            </LinearLayout>
+
+            <!--Panel Flash Sale dan Horizontal-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Flashsale-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="FLASH SALE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingTop="10dp"
+                        android:layout_gravity="center"
+                        android:text="Lihat Semua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:paddingTop="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/right"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                </LinearLayout>
+
+                <!--Tampilan Horizontal-->
+                <HorizontalScrollView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--Produk 1-->
+                        <LinearLayout
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="120dp"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content">
+                            <!--Gambar-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/tas_satu"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <!--Ketrangan-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/orange"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:text="Rp 62.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--Produk 2-->
+                        <LinearLayout
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="120dp"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content">
+                            <!--Gambar-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/tas_dua"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <!--Ketrangan-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/orange"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:text="Rp 99.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--Produk 3-->
+                        <LinearLayout
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="120dp"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content">
+                            <!--Gambar-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/tas_tiga"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <!--Ketrangan-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/orange"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:text="Rp 49.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--Produk 4-->
+                        <LinearLayout
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="120dp"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content">
+                            <!--Gambar-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/tas_empat"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <!--Ketrangan-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/orange"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:text="Rp 109.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--Produk 5-->
+                        <LinearLayout
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="120dp"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content">
+                            <!--Gambar-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/tas_lima"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <!--Ketrangan-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/orange"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:text="Rp 74.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/item_bottom_navigasi"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Rekomendasi"
+        android:id="@+id/rekomendasi"
+        android:icon="@drawable/ic_rekomendasi" />
+    <item android:title="Feed"
+        android:id="@+id/feed"
+        android:icon="@drawable/ic_feed"/>
+    <item android:title="Shopee Live"
+        android:id="@+id/live"
+        android:icon="@drawable/ic_live"/>
+    <item android:title="Notifikasi"
+        android:id="@+id/notifikasi"
+        android:icon="@drawable/ic_notifikasi"/>
+    <item android:title="Saya"
+        android:id="@+id/person"
+        android:icon="@drawable/ic_person"/>
+
+</menu>
